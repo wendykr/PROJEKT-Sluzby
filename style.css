@@ -1,0 +1,266 @@
+/* nejsme vcerejsi, pouzivame moderni a intuitivni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #8B8B8B;
+    background-color: #FAFAFA;
+}
+
+section {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.section-inner {
+    margin: 0 auto;
+    max-width: 460px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.sekce:first-child {
+    margin-top: 40px;
+}
+
+.sekce:last-of-type {
+    margin-bottom: 60px;
+}
+
+.main {
+    margin-top: 0;
+}
+
+.logo {
+    width: 350px;
+}
+
+.line {
+    height: 2px;
+    border: 0;
+    background: #407BFF;
+    width: 60px;
+    margin: 10px 0 30px 0;
+    display: inline-block;
+}
+
+.button {
+    margin-top: 30px;
+}
+
+.button + .button {
+    margin-top: 10px;
+}
+
+.button a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 30px;
+    display: inline-block;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #407BFF;
+}
+
+.button a:hover {
+    background-color: #8B8B8B;
+}
+
+.content {
+    margin-top: 28px;
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.motto {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px #407BFF1F;
+    padding: 20px;
+    gap: 30px;
+}
+
+.motto + .motto {
+    margin-top: 15px;
+}
+
+.popis {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+
+@media screen and (min-width: 640px) {
+    section {
+        padding: 0;
+    }
+
+    .sekce:first-child {
+        margin-top: 60px;
+    }
+
+    .section-inner {
+        max-width: 550px;
+    }
+
+    .sekce + .sekce {
+        margin-top: 80px;
+    }
+
+    .main {
+        margin-top: 40px;
+    }
+
+    h1 {
+        font-size: 28px;
+        font-weight: 500;
+        color: #000000;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 16px;
+        font-weight: 500;
+        color: #000000;
+    }
+
+    .logo {
+        width: 400px;
+    }
+
+    .button {
+        display: inline-block;
+    }
+
+    .button + .button {
+        margin-left: 20px;
+    }
+
+    .button a {
+        font-size: 14px;
+        color: #ffffff;
+        text-decoration: none;
+        text-align: center;
+        padding: 10px 30px;
+        display: block;
+        border-radius: 20px 20px 20px 20px;
+        background-color: #407BFF;
+    }
+
+    .button a:hover {
+        background-color: #8B8B8B;
+    }
+
+    .content {
+        display: flex;
+        gap: 20px;
+        justify-content: space-evenly;
+        padding: 0;
+        margin-top: 40px;
+        max-width: 100%;
+    }
+
+    .motto {
+        flex: 0 0 calc(100% / 3);
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px #407BFF1F;
+        padding: 45px 15px;
+        display: block;
+        text-align: center;
+    }
+
+    .motto + .motto {
+        margin-top: 0;
+    }
+
+    .icon {
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .sekce {
+        max-width: 1040px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .sekce + .sekce {
+        margin-top: 80px;
+    }
+
+    .main {
+        margin-top: 0;
+    }
+
+
+    section {
+        padding: 0;
+    }
+
+    .header {
+        order: 2;
+    }
+
+    .logo {
+        max-width: 425px;
+        margin: 0 auto;
+    }
+
+    .content {
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .motto {
+        flex: 0 0 calc((100% - 60px) / 3);
+    }
+
+    .main {
+        order: 1;
+        max-width: 490px;
+        text-align: left;
+    }
+
+    .text2 {
+        order: 2;
+        flex: 0 0 430px;
+    }
+
+    .ikony2 {
+        flex: 0 0 550px;
+        order: 1;
+    }
+
+    .text3 {
+        order: 1;
+        flex: 0 0 430px;
+    }
+
+    .ikony3 {
+        flex: 0 0 550px;
+        order: 2;
+    }
+}
