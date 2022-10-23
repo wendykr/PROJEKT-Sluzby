@@ -12,14 +12,65 @@ body {
     background-color: #FAFAFA;
 }
 
+.obal {
+    margin: 40px 0;
+}
+
+@media screen and (min-width: 640px) {
+    .obal {
+        margin: 60px 0;
+    }
+}
+
+.sekce + .sekce {
+    margin-top: 60px;
+}
+
+@media screen and (min-width: 1100px) {
+    .sekce + .sekce {
+        margin-top: 80px;
+    }
+}
+
+.sekce {
+    padding: 0;
+}
+
+@media screen and (min-width: 1100px) {
+    .sekce {
+        max-width: 1040px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+}
+
 section {
-    padding: 20px 0;
     text-align: center;
+}
+
+@media screen and (min-width: 1100px) {
+   section {
+        text-align: left;
+    }
 }
 
 .section-inner {
     margin: 0 auto;
     max-width: 460px;
+}
+
+@media screen and (min-width: 640px) {
+    .section-inner {
+        max-width: 550px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .section-inner {
+        margin: 0;
+    }
 }
 
 h1 {
@@ -29,43 +80,76 @@ h1 {
     margin: 0;
 }
 
+h1::after {
+    content:"";
+    height: 2px;
+    border: 0;
+    background: #407BFF;
+    width: 60px;
+    margin: 10px auto 30px auto;
+    display: block;
+}
+
+@media screen and (min-width: 1100px) {
+    h1::after {
+        margin: 10px 0 30px 0;
+    }
+}
+
 h2 {
     font-size: 16px;
     font-weight: 500;
     color: #000000;
 }
 
-.sekce:first-child {
+.main {
     margin-top: 40px;
 }
 
-.sekce:last-of-type {
-    margin-bottom: 60px;
-}
-
-.main {
-    margin-top: 0;
+@media screen and (min-width: 1100px) {
+    .main {
+        margin-top: 0;
+        max-width: 490px;
+        text-align: left;
+        order: 1;
+    }
 }
 
 .logo {
     width: 350px;
 }
 
-.line {
-    height: 2px;
-    border: 0;
-    background: #407BFF;
-    width: 60px;
-    margin: 10px 0 30px 0;
-    display: inline-block;
+@media screen and (min-width: 640px) {
+    .logo {
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .logo {
+        max-width: 425px;
+        margin: 0 auto;
+    }
 }
 
 .button {
     margin-top: 30px;
 }
 
+@media screen and (min-width: 640px) {
+    .button {
+        display: inline-block;
+    }
+}
+
 .button + .button {
     margin-top: 10px;
+}
+
+@media screen and (min-width: 640px) {
+    .button + .button {
+        margin-left: 20px;
+    }
 }
 
 .button a {
@@ -80,6 +164,12 @@ h2 {
     background-color: #407BFF;
 }
 
+@media screen and (min-width: 640px) {
+    .button a {
+        display: block;
+    }
+}
+
 .button a:hover {
     background-color: #8B8B8B;
 }
@@ -91,6 +181,26 @@ h2 {
     margin-right: auto;
 }
 
+@media screen and (min-width: 640px) {
+    .content {
+        display: flex;
+        gap: 20px;
+        justify-content: space-evenly;
+        padding: 0;
+        margin-top: 40px;
+        margin-left: 18px;
+        margin-right: 18px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .content {
+        margin: 0;
+        justify-content: space-between;
+    }
+}
+
 .motto {
     display: flex;
     align-items: center;
@@ -100,8 +210,25 @@ h2 {
     gap: 30px;
 }
 
+@media screen and (min-width: 640px) {
+    .motto {
+        flex: 0 1 100%;
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px #407BFF1F;
+        padding: 40px 15px;
+        display: block;
+        text-align: center;
+    }
+}
+
 .motto + .motto {
     margin-top: 15px;
+}
+
+@media screen and (min-width: 640px) {
+    .motto + .motto {
+        margin-top: 0;
+    }
 }
 
 .popis {
@@ -109,155 +236,37 @@ h2 {
     font-weight: 300;
 }
 
+.icon {
+    display: block;
+    margin: 0 auto;
+}
 
 @media screen and (min-width: 640px) {
-    section {
-        padding: 0;
-    }
-
-    .sekce:first-child {
-        margin-top: 60px;
-    }
-
-    .section-inner {
-        max-width: 550px;
-    }
-
-    .sekce + .sekce {
-        margin-top: 80px;
-    }
-
-    .main {
-        margin-top: 40px;
-    }
-
-    h1 {
-        font-size: 28px;
-        font-weight: 500;
-        color: #000000;
-        margin: 0;
-    }
-
-    h2 {
-        font-size: 16px;
-        font-weight: 500;
-        color: #000000;
-    }
-
-    .logo {
-        width: 400px;
-    }
-
-    .button {
-        display: inline-block;
-    }
-
-    .button + .button {
-        margin-left: 20px;
-    }
-
-    .button a {
-        font-size: 14px;
-        color: #ffffff;
-        text-decoration: none;
-        text-align: center;
-        padding: 10px 30px;
-        display: block;
-        border-radius: 20px 20px 20px 20px;
-        background-color: #407BFF;
-    }
-
-    .button a:hover {
-        background-color: #8B8B8B;
-    }
-
-    .content {
-        display: flex;
-        gap: 20px;
-        justify-content: space-evenly;
-        padding: 0;
-        margin-top: 40px;
-        max-width: 100%;
-    }
-
-    .motto {
-        flex: 0 0 calc(100% / 3);
-        background-color: #ffffff;
-        box-shadow: 0 4px 6px #407BFF1F;
-        padding: 45px 15px;
-        display: block;
-        text-align: center;
-    }
-
-    .motto + .motto {
-        margin-top: 0;
-    }
-
     .icon {
         padding-bottom: 20px;
     }
 }
 
 @media screen and (min-width: 1100px) {
-    .sekce {
-        max-width: 1040px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        gap: 60px;
-    }
-
-    .sekce + .sekce {
-        margin-top: 80px;
-    }
-
-    .main {
-        margin-top: 0;
-    }
-
-
-    section {
-        padding: 0;
-    }
-
     .header {
+        margin-left: auto;
+        margin-right: auto;
         order: 2;
-    }
-
-    .logo {
-        max-width: 425px;
-        margin: 0 auto;
-    }
-
-    .content {
-        padding: 0;
-        margin: 0;
-        justify-content: space-between;
-    }
-
-    .motto {
-        flex: 0 0 calc((100% - 60px) / 3);
-    }
-
-    .main {
-        order: 1;
-        max-width: 490px;
-        text-align: left;
     }
 
     .text2 {
-        order: 2;
         flex: 0 0 430px;
+        order: 2;
+    }
+
+    .text3 {
+        flex: 0 0 430px;
+        order: 1;
     }
 
     .ikony2 {
         flex: 0 0 550px;
         order: 1;
-    }
-
-    .text3 {
-        order: 1;
-        flex: 0 0 430px;
     }
 
     .ikony3 {
